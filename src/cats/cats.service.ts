@@ -4,15 +4,12 @@ import { Cat } from './interfaces/cats.interface';
 @Injectable()
 export class CatsService {
 
-// constructor(){
-//     this.cats = []
-// }
-
-    private readonly cats: Cat[]=[];
+    private readonly cats: Cat[] = [];
 
     findAll(): Cat[] {
-        return this.cats
+        return this.cats;
     }
+
     create(cat: Cat): void {
         this.cats.push(cat);
     }
@@ -32,4 +29,5 @@ export class CatsService {
     update(index: number, cat: Cat): void {
         this.cats.splice(index, 1, cat);
     }
+
 }
